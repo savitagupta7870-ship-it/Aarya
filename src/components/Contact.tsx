@@ -68,14 +68,19 @@ export function ContactForm() {
              </div>
              
              <div className="flex gap-4 pt-6">
-                {[Instagram, Twitter, Youtube].map((Icon, i) => (
+                {[
+                  { icon: Instagram, href: 'https://www.instagram.com/aaryaamv6?igsh=MWhzd20wZTVyajV4bQ==' },
+                  { icon: Youtube, href: 'https://youtube.com/@aaryaamv-q9c?si=sNut3GR1oWQXbw-f' }
+                ].map((social, i) => (
                    <motion.a
                       key={i}
-                      href="#"
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ y: -5, color: '#FFE600' }}
                       className="w-12 h-12 glass rounded-full flex items-center justify-center text-white/60 transition-all"
                    >
-                      <Icon className="w-5 h-5" />
+                      <social.icon className="w-5 h-5" />
                    </motion.a>
                 ))}
              </div>

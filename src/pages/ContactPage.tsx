@@ -19,9 +19,8 @@ export default function ContactPage() {
 
   const contactMethods = [
     { icon: Mail, label: 'Email', value: 'aaryaamv777@gmail.com', href: 'mailto:aaryaamv777@gmail.com' },
-    { icon: Instagram, label: 'Instagram', value: '@aarya_thumbnails', href: '#' },
-    { icon: Twitter, label: 'Twitter', value: '@aaryadesign', href: '#' },
-    { icon: Youtube, label: 'YouTube', value: 'Aarya Design', href: '#' },
+    { icon: Instagram, label: 'Instagram', value: '@aaryaamv6', href: 'https://www.instagram.com/aaryaamv6?igsh=MWhzd20wZTVyajV4bQ==' },
+    { icon: Youtube, label: 'YouTube', value: '@aaryaamv-q9c', href: 'https://youtube.com/@aaryaamv-q9c?si=sNut3GR1oWQXbw-f' },
   ];
 
   return (
@@ -49,6 +48,8 @@ export default function ContactPage() {
                 <motion.a
                   key={method.label}
                   href={method.href}
+                  target={method.href.startsWith('http') ? "_blank" : undefined}
+                  rel={method.href.startsWith('http') ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
